@@ -17,7 +17,7 @@ jobs:
     name: Code lint
     steps:
       - name: Docker Image
-        uses: workflow-test/actions/action
+        uses: LucasVmigotto/workflow-test/actions/main@v1
       - name: Install dependencies
         run: yarn
       - name: Linter
