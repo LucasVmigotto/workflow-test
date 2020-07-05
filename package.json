@@ -1,0 +1,25 @@
+{
+  "name": "workflow-test",
+  "version": "0.0.1",
+  "description": "Testing GitHub workflow actions",
+  "main": "src/index.js",
+  "repository": "git@github.com:LucasVmigotto/workflow-test.git",
+  "author": "Lucas Vidor Migotto <lvmigotto1@gmail.com>",
+  "license": "MIT",
+	"private": false,
+	"scripts": {
+		"start": "nodemon src/index.js",
+		"lint": "standard src/**/*"
+	},
+  "devDependencies": {
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
