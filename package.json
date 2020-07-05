@@ -6,13 +6,14 @@
   "repository": "git@github.com:LucasVmigotto/workflow-test.git",
   "author": "Lucas Vidor Migotto <lvmigotto1@gmail.com>",
   "license": "MIT",
-	"private": false,
-	"scripts": {
-		"start": "nodemon src/index.js",
-		"lint": "standard src/**/*"
-	},
+  "private": false,
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "lint": "standard src/**/* test/**/*",
+    "test": "mocha test/**/*.test.js"
+  },
   "devDependencies": {
-    "chai-as-promised": "^7.1.1",
+    "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "mocha": "^8.0.1",
     "nodemon": "^2.0.4",
