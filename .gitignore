@@ -2,3 +2,4 @@ node_modules
 .tool_versions
 .nyc_output
 coverage
+.env

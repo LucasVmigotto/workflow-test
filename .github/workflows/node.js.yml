@@ -1,0 +1,24 @@
+name: Workflow Test CI
+
+on:
+  push:
+    branches:
+      - master
+      - dev
+  pull_request:
+    branches:
+      - master
+      - dev
+
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    name: Code lint
+    steps:
+      - name: Docker Image
+        uses: workflow-test/actions/action
+      - name: Install dependencies
+        run: yarn
+      - name: Linter
+        run: yarn run lint
