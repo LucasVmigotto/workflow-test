@@ -16,9 +16,18 @@ jobs:
     runs-on: ubuntu-latest
     name: Code lint
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Docker Image
-        uses: LucasVmigotto/workflow-test/actions/main@v1
+        uses: LucasVmigotto/workflow-test/docker@master
       - name: Install dependencies
         run: yarn
+      - name: Cache modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
       - name: Linter
         run: yarn run lint

@@ -1,5 +1,0 @@
-name: Docker
-description: Build a docker image
-runs:
-  using: 'docker'
-  image: '../docker/Dockerfile'
