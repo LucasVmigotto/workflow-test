@@ -11,7 +11,7 @@
     "start": "nodemon src/index.js",
     "lint": "standard src/**/* test/**/*",
     "test": "mocha test/**/*.test.js",
-    "test:coverage": "nyc yarn test"
+    "test:coverage": "nyc yarn test:coverage"
   },
   "devDependencies": {
     "chai": "^4.2.0",
